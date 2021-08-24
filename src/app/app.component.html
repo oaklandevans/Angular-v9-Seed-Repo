@@ -1,5 +1,6 @@
 <div>
-    <app-header></app-header>
-    <p>The app is working!</p>
-    <app-child></app-child>
+    <app-header [user]="user"></app-header>
+    <p>Logged In: {{ loggedIn }}</p>
+    <!-- <p>The app is working!</p> -->
+    <app-child (login)="logIn($event)"></app-child>
 </div>
