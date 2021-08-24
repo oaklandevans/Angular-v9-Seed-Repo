@@ -1,15 +1,21 @@
 <div>
     <app-header [user]="user"></app-header>
 
-    <section *ngIf="!user.registered">
+    <!-- <section *ngIf="!user.registered">
         <img src="../assets/images/chooseMyPlate.gov.png">
     </section>
 
     <section *ngIf="user.registered">
         <img src="../assets/images/generic-plate.png">
-    </section>
-
-    <p>Logged In: {{ loggedIn }}</p>
+    </section> -->
+    <div [ngSwitch]="loggedIn">
+        <p>Logged In:
+            <span *ngSwitchCase="false" class="notRegistered">{{ loggedIn }}</span>
+            <span *ngSwitchCase="true">{{ loggedIn }}</span>
+            <span *ngSwitchDefault>Default Text</span>
+        </p>
+    </div>
+    
     <!-- <p>The app is working!</p> -->
     <app-child (login)="logIn($event)"></app-child>
 </div>

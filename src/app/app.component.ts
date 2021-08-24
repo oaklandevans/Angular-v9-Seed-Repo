@@ -16,7 +16,7 @@ export class AppComponent {
         }, registered: true, email: 'kevin@kevinruse.com'
     };
 
-    loggedIn: boolean;
+    loggedIn: boolean = false;
 
     logIn(evt) {
         console.log(evt);
