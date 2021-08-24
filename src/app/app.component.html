@@ -1,5 +1,14 @@
 <div>
     <app-header [user]="user"></app-header>
+
+    <section *ngIf="!user.registered">
+        <img src="../assets/images/chooseMyPlate.gov.png">
+    </section>
+
+    <section *ngIf="user.registered">
+        <img src="../assets/images/generic-plate.png">
+    </section>
+
     <p>Logged In: {{ loggedIn }}</p>
     <!-- <p>The app is working!</p> -->
     <app-child (login)="logIn($event)"></app-child>
