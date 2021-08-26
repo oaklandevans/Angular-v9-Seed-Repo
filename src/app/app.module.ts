@@ -2,7 +2,7 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,9 +11,19 @@ import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
-    imports:      [ BrowserModule, FormsModule ],
-    declarations: [ AppComponent, HeaderComponent, ChildComponent, LoginComponent ],
-    bootstrap:    [ AppComponent ]
+    imports: [
+        BrowserModule,
+        FormsModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        ChildComponent,
+        LoginComponent
+    ],
+    bootstrap: [AppComponent]
 })
 
-export class AppModule {}
+export class AppModule { }
