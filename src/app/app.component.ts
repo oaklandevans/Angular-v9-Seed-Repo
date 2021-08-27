@@ -9,11 +9,11 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class AppComponent {
 
     user = {
-        id: 1, name: 'Kevin', gender: 'M', ageGroup: '51+',
-        userCode: 'M51+', reqs: {}, reqsStatus: {
+        id: 1, name: 'Oakland', gender: 'M', ageGroup: '32+',
+        userCode: 'M32+', reqs: {}, reqsStatus: {
             fruitMet: false, vegMet: false,
             proteinMet: false, grainMet: false
-        }, registered: true, email: 'kevin@kevinruse.com'
+        }, registered: true, email: 'oaklandenterprises.com'
     };
 
     loggedIn: boolean = false;
